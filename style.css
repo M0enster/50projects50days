@@ -1,22 +1,22 @@
 html * {
-  background-color: #1f1e1e;
-  color: #c9c9c9;
-  margin: 0;
-  padding: 0;
+	background-color: #1f1e1e;
+	color: #c9c9c9;
+	margin: 0;
+	padding: 0;
 }
 
 .link-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
-  margin: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+	margin: 20px;
 }
 
 h1 {
-  margin-bottom: 30px;
+	margin-bottom: 30px;
 }
 
 a {
-  margin: 10px;
+	margin: 10px;
 }
