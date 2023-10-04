@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap');
 
-html * {
-  background-color: #1f1e1e;
-  color: #c9c9c9;
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
+  background-color: #1f1e1e;
+  color: #c9c9c9;
   font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
