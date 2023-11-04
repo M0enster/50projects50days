@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="#" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Password Generator</h2>
+      <div class="result-container">
+        <div id="result"></div>
+        <button class="btn" id="clipboard">
+          <i class="far fa-clipboard"> </i>
+        </button>
+      </div>
+
+      <div class="settings">
+        <div class="setting">
+          <label>Password Length</label>
+          <input
+            type="text"
+            id="length"
+            minlength="2"
+            maxlength="2"
+            value="20"
+            size="1"
+          />
+          <div class="updown">
+            <button id="length-up" class="btn-up">
+              <i class="fas fa-chevron-up"></i>
+            </button>
+            <button id="length-down" class="btn-down">
+              <i class="fas fa-chevron-down"></i>
+            </button>
+          </div>
+          <input
+            type="range"
+            id="slider"
+            min="16"
+            max="99"
+            value="20"
+          />
+        </div>
+        <div class="setting">
+          <label>Include lowercase letters</label>
+          <input type="checkbox" id="lowercase" checked />
+        </div>
+        <div class="setting">
+          <label>Include uppercase letters</label>
+          <input type="checkbox" id="uppercase" checked />
+        </div>
+        <div class="setting">
+          <label>Include numbers</label>
+          <input type="checkbox" id="numbers" checked />
+        </div>
+        <div class="setting">
+          <label>Include symbols</label>
+          <input type="checkbox" id="symbols" checked />
+        </div>
+      </div>
+
+      <button class="btn btn-large" id="generate">
+        Generate Password
+      </button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
