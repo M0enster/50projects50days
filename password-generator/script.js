@@ -104,11 +104,28 @@ clipboardEl.addEventListener('click', async () => {
   const password = resultEl.innerText
   if (!password) return
   try {
-    await navigator.clipboard.writeText(password)
+    console.log(navigator.clipboard)
+    console.log(window.isSecureContext)
+    if (navigator.clipboard && !window.isSecureContext) {
+      console.log('foo')
+      await navigator.clipboard.writeText(password)
+    } else {
+      // Fallback for browsers that don't support Clipboard API
+      copyToClipboardFallback(password)
+    }
   } catch (err) {
     console.error('Failed to copy password: ', err)
   }
 })
+
+function copyToClipboardFallback(text) {
+  const textarea = document.createElement('textarea')
+  textarea.value = text
+  document.body.appendChild(textarea)
+  textarea.select()
+  document.execCommand('copy')
+  document.body.removeChild(textarea)
+}
 
 sliderFill()
 generate()

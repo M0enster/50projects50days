@@ -111,6 +111,9 @@ h2 {
 .setting #slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   background: darkslateblue;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
   border: 2px solid #c9c9c9;
   cursor: pointer;
 }
